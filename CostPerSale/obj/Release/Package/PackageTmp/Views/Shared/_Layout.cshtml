@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - 笔记本配置推荐</title>
+    @Styles.Render("~/Content/css")
+</head>
+<body style="background:url(/Content/NoteBook/Img/1.jpg) fixed;">
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("笔记本推荐", "VideoGame", "Notebook", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("游戏影音", "VideoGame", "Notebook")</li>
+                    <li>@Html.ActionLink("商务办公", "BusinessOffice", "Notebook")</li>
+                    <li>@Html.ActionLink("热门推荐", "Hot", "Notebook")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron">
+        <div class="container">
+            <h1>2018,笔记本电脑拆机评测</h1>
+            <p>我们不出售任何商品,专业大牛为你找到当前市面上，最适合你的笔记本电脑</p>
+            <p class="alert-danger">每周进行更新，每个档位更新三款</p>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer style="text-align:center;">
+            <p>&copy;2002-2018 notebook.cpsale.com 版权所有 </p>
+            <p>ICP备:备案中.. </p>
+            <script type="text/javascript">
+ var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_1273573460'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/z_stat.php%3Fid%3D1273573460%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
